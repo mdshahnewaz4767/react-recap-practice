@@ -1,4 +1,5 @@
 // import logo from './logo.svg'; //For logo
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -24,10 +25,13 @@ function MovieCounter(){
     border: '2px solid salmon',
     width: '600px'
   }
+  const [count, setCount] = useState(5);
+
   return (
     <div style={movieStyle}>
-      <button>Add Movie</button>
-      <h3>Number of movies: </h3>
+      <button onClick={() => {setCount(count + 1)}}>Add Movie</button>
+      <button onClick={() => {setCount(count - 1)}}>Remove Movie</button>
+      <h3>Number of movies: {count}</h3>
     </div>
   )
 }
