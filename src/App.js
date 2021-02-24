@@ -5,12 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome</h1>
+        <MovieCounter></MovieCounter>
         <Area name={peoples[0]}></Area>
-        <Area name={peoples[1]}></Area>
-        <Area name={peoples[2]}></Area>
-        <Area name={peoples[3]}></Area>
-        <Area name={peoples[4]}></Area>
       </header>
     </div>
   );
@@ -22,6 +18,19 @@ function App() {
 const peoples = ['Muhammad', 'Shahnewaz', 'Newaz', 'Khondokar', 'Shahriar'];
 
 // const singlePeople = peoples.map(people => people);
+
+function MovieCounter(){
+  const movieStyle = {
+    border: '2px solid salmon',
+    width: '600px'
+  }
+  return (
+    <div style={movieStyle}>
+      <button>Add Movie</button>
+      <h3>Number of movies: </h3>
+    </div>
+  )
+}
 
 function Area(props){
   const areaStyle = {
