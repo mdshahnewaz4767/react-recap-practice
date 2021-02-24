@@ -50,5 +50,4 @@ function Area(props){
     </div>
   )
 }
-
 export default App;
